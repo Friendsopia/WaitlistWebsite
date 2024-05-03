@@ -4,7 +4,7 @@ const connectDB = async () => {
   await mongoose;
   mongoose
     .set("strictQuery", true)
-    .connect("mongodb://127.0.0.1:27017/email", {
+    .connect("mongodb+srv://friendsopia:DR6g1jQySf38u7hP@webwaitlist.rqnbumw.mongodb.net/?retryWrites=true&w=majority&appName=webWaitlist", {
       useNewUrlParser: "true",
       useUnifiedTopology: "true",
     })

@@ -50,7 +50,7 @@ function PageHook() {
 
   const onSubmit = async (data) => {
     try {
-      let res = await fetch("https://main.d29cj0x31gnm03.amplifyapp.com/api/email", {
+      let res = await fetch("http://main.d29cj0x31gnm03.amplifyapp.com/api/email", {
         method: "POST",
         body: JSON.stringify(data.email),
       });

@@ -54,7 +54,7 @@ function PageHook() {
         method: "POST",
         body: JSON.stringify(data.email),
       });
-  
+      console.log(res,"hello")
       if (res.ok) {
         reset();
         handleOpenModel();

@@ -50,23 +50,49 @@ function PageHook() {
 
   const onSubmit = async (data) => {
     try {
-      let res = await fetch("http://main.d29cj0x31gnm03.amplifyapp.com/api/email", {
+      let res = await fetch("https://main.d29cj0x31gnm03.amplifyapp.com/api/email", {
         method: "POST",
         body: JSON.stringify(data.email),
       });
+  
       if (res.ok) {
         reset();
         handleOpenModel();
-      }
-
-      if (!res.ok) {
+      } else if (res.status === 409) {
         reset();
-        throw new Error({ message: "Email already exists" });
+        throw new Error({ message: "Email Already Exists" });
+        // Handle email conflict error
+        // For example, set an error state to display a message to the user
+      } else {
+        reset();
+        throw new Error({ message: "Something went wrong" });
       }
     } catch (error) {
       console.log(error);
+      // Handle other errors, e.g., network errors
     }
   };
+
+
+  // const onSubmit = async (data) => {
+  //   try {
+  //     let res = await fetch("https://main.d29cj0x31gnm03.amplifyapp.com/api/email", {
+  //       method: "POST",
+  //       body: JSON.stringify(data.email),
+  //     });
+  //     if (res.ok) {
+  //       reset();
+  //       handleOpenModel();
+  //     }
+
+  //     if (!res.ok) {
+  //       reset();
+  //       throw new Error({ message: "Email already exists" });
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <div className="h-full w-full p-3 flex items-center justify-center relative z-50">

@@ -80,7 +80,7 @@ let textvariant = {
 
 let Icons = [
   { name: <PiInstagramLogo />, href: "https://instagram.com/grooveclub.in " },
-  { name: <PiLinkedinLogo />, href: "https://instagram.com/Joscriptt " },
+  { name: <PiLinkedinLogo />, href: "https://www.linkedin.com/company/grooveclub/" },
 ];
 
 function Headpage() {

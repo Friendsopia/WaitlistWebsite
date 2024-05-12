@@ -153,7 +153,7 @@ function PageHook() {
             <h1 className="text-3xl font-bold  sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent dark:bg-gradient-to-r bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-800 capitalize md:max-w-2xl lg:max-w-3xl mx-auto ">
               Groove: Discover Connect Groove!
             </h1>
-            <p className="max-w-[600px]  leading-7 text-center text-[16px] bg-clip-text text-transparent dark:bg-gradient-to-br bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-700 mx-auto ">
+            <p style={{marginTop: '30px', marginBottom: "30px"}} className="max-w-[600px] leading-7 text-center text-[16px] bg-clip-text text-transparent dark:bg-gradient-to-br bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-700 mx-auto ">
               "Welcome to Groove: Where Connections Spark and Vibes Soar!
               Get ready to groove with us! Discover new friends, exciting events, and unforgettable moments. Let's turn up the fun together!"
             </p>
